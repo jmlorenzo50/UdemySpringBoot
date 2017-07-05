@@ -11,11 +11,27 @@ spring:
     #mode: HTML5                   # Template mode to be applied to templates: See also StandardTemplateModeHandlers
     prefix: classpath:/templates/  # Prefix that gets prepended to view names when building a URL
     suffix: .html                  # Suffix that gets appended to view names when building a URL
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb
+    username: root
+    password: 12345678
     #template-resolver-order:      # Order of the template resolver in the chain
-    #view-names:                   # Comma-separated list of view names that can be resolved  
-
+    #view-names:                   # Comma-separated list of view names that can be resolved
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+              
 
 server:
   error:
     whitelabel:
       enabled: true                # Enable the default error page displayed in browsers in case of a server error.
+
+
+      

@@ -1,1 +1,12 @@
+/home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/model/Person.java
 /home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/BackendninjaApplication.java
+/home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/service/impl/ExampleServiceImpl.java
+/home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/controller/Example2Controller.java
+/home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/component/RequestTimeInterceptor.java
+/home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/controller/Example3Controller.java
+/home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/configuration/WebMvcConfiguration.java
+/home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/service/ExampleService.java
+/home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/controller/ExampleController.java
+/home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/controller/ErrorController.java
+/home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/component/ExampleComponent.java
+/home/jorge/workspaces/wk_neon_3/backendninja/src/main/java/com/udemy/backendninja/controller/HelloWorldController.java
