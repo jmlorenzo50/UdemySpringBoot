@@ -9,6 +9,7 @@
 	<table>
 		<thead>
 			<tr>
+				<th>Id</th>
 				<th>Name</th>
 				<th>Description</th>
 				<th>Price</th>
@@ -16,16 +17,23 @@
 			</tr>		
 		</thead>
 		<tbody>
-			<tr th:each="course : ${courses}">
-				<td><span th:text="${course.name}"></span></td>
-				<td><span th:text="${course.description}"></span></td>
-				<td><span th:text="${course.price}"></span></td>
-				<td><span th:text="${course.hours}"></span></td>
+			<tr th:each="courseModel : ${courses}">
+				<td><span th:text="${courseModel.id}"></span></td>
+				<td><span th:text="${courseModel.name}"></span></td>
+				<td><span th:text="${courseModel.description}"></span></td>
+				<td><span th:text="${courseModel.price}"></span></td>
+				<td><span th:text="${courseModel.hours}"></span></td>
+				<td>
+					<form action="#" th:action="@{/course/delete}" method="post">
+						<input type="hidden" th:value="${courseModel.id}" name="id"/>
+						<input type="submit" value="X" />
+					</form>
+				</td>
 			</tr>
 		</tbody>
 	</table>
 	
-	<form action="#" th:action="@{/course/add}" th:object="${course}" method="post">
+	<form action="#" th:action="@{/course/add}" th:object="${courseModel}" method="post">
 		<p>Name: <input type="text" th:field="*{name}" /></p>
 		<p>Description: <input type="text" th:field="*{description}" /></p>
 		<p>Price: <input type="number" th:field="*{price}" /></p>

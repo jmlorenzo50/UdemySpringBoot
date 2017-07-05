@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.udemy.backendninja.entity.Course;
+import com.udemy.backendninja.model.CourseModel;
 import com.udemy.backendninja.service.CourseService;
 
 @Controller
@@ -27,20 +27,27 @@ public class CourseController {
 	private CourseService courseService;
 	
 	@GetMapping("/list")
-	public ModelAndView listAllCourses() {
-		LOG.info("Call: " + "listAllCourses");
+	public ModelAndView listAllCourse() {
+		LOG.info("call: " + "listAllCourse");
 		ModelAndView mav = new ModelAndView(COURSES_VIEW);
 		mav.addObject("courses", courseService.listAllCourse());
-		mav.addObject("course", new Course());
+		mav.addObject("courseModel", new CourseModel());
 		return mav;
 	}
 	
 	@PostMapping("/add")
-	public String addCourse(@ModelAttribute("course") Course course) {
-		LOG.info("Call: " + "addCourse" + ", PARAMS: " + course.toString());
+	public String addCourse(@ModelAttribute("courseModel") CourseModel course) {
+		LOG.info("call: " + "addCourse" + ", PARAMS: " + course.toString());
 		courseService.addCourse(course);
 		return "redirect:/course/list";
 	}
 	
+	@PostMapping("/delete")
+	public String deleteCourse(@ModelAttribute("courseModel") CourseModel course) {
+		LOG.info("call: " + "deleteCourse" + ", PARAMS: " + course.toString());
+		courseService.removeCourse(course.getId());
+		return "redirect:/course/list";
+	}
 
+	
 }
