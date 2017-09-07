@@ -1,7 +1,7 @@
 # THYMELEAF (ThymeleafAutoConfiguration)
 spring:
   thymeleaf:
-    cache: true                    # Enable template caching
+    cache: false                   # Enable template caching
     check-template: true           # Check that the template exists before rendering it
     check-template-location: true  # Check that the templates location exists
     content-type: text/html        # Content-Type value
@@ -12,7 +12,7 @@ spring:
     prefix: classpath:/templates/  # Prefix that gets prepended to view names when building a URL
     suffix: .html                  # Suffix that gets appended to view names when building a URL
   datasource:
-    url: jdbc:mysql://localhost:3306/mydb
+    url: jdbc:mysql://localhost:3306/mydb?useSSL=false
     username: root
     password: 12345678
     #template-resolver-order:      # Order of the template resolver in the chain
